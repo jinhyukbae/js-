@@ -1,0 +1,149 @@
+<!doctype html>
+<html>
+<head>
+<title>WEB1 - html</title>
+<meta charset="utf-8">
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+<a href=""></a>
+<body>
+  <h1><a href="index.html">WEB</a></h1>
+
+  <!--이름이 나이트인 버튼을 클릭했을 때 백그라운드컬러가 블랙 그냥 컬러가 화이트인 명령어를 실행한다
+
+ -->
+
+ <!--  아래 if문을 쓰면서 이 코드를 쓰지 않아도 주간 야간 모드 실행이 되고 버튼이 한개로 통일된다
+
+  <input type="button" value="night" onclick="
+  document.querySelector('body').style.backgroundColor = 'black';
+  document.querySelector('body').style.color = 'white';
+  ">
+
+  <input type="button" value="day" onclick="
+  document.querySelector('body').style.backgroundColor = 'white';
+  document.querySelector('body').style.color = 'black';
+  ">
+-->
+
+<!--
+나이트인 버튼을 눌렀을 때 값이 나이트면 야간모드 가 실행되고 유지되고
+나이트를 눌렀을 때 밸류가 데이라면 다시 눌렀을 때 주간모드가 실행된다
+
+데이를 클릭하면
+if(document.querySelector('#night_day') 값이
+if(document.querySelector('day')로 바뀜 그렇게 되면
+if(document.querySelector('#night_day').value === 'night')이 거짓이 되면서
+else 가 실행됨
+ -->
+
+<!-- var links = document.querySelectorAll('a');
+모든 a태그를 가져온 다음에 그 a 태그 하나하나에 대해서 반복적으로(while)
+파우더블루 컬러를 지정한다
+
+-->
+
+ <input type="button" value="night" onclick="
+ var target = document.querySelector('body');
+   if(this.value === 'night'){
+   target.style.backgroundColor = 'black';
+   target.style.color = 'white';
+   this.value = 'day';
+
+   var links = document.querySelectorAll('a');
+   var i = 0;
+   while(i<links.length){
+     links[i].style.color='powderblue';
+     i=i+1;
+   }
+
+
+ } else {
+   target.style.backgroundColor = 'white';
+   target.style.color = 'black';
+   this.value = 'night';
+   var links = document.querySelectorAll('a');
+   var i = 0;
+   while(i<links.length){
+     links[i].style.color='blue';
+     i=i+1;
+   }
+
+   }
+   ">
+
+
+  <div id="grid">
+<ol>
+  <li><a href="1.html">HTML</a></li>
+  <li><a href="2.html">CSS</a></li>
+  <li><a href="3.html">JavaScript</a></li>
+</ol>
+
+<div id="article">
+
+<h2>HTML이란 무엇인가?</h2>
+<p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/7T7r_oSp0SE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+</p>
+
+
+<p><a href="https://en.wikipedia.org/wiki/HTML5/"target="_blank"title="html5 speicification">Hypertext Markup Language (HTML)</a> is the standard markup language for <strong>creating <u>web pages</u></strong> and web applications.Web browsers receive HTML documents form a web server or from local storage and render them into multimedia web pages. Html describes the structure of a web page semantically and originally included cues for the appearance of the document.</p>
+<img src="z.png" width="60%"> <iframe width="900" height="768" src="https://www.youtube.com/embed/MlNndKvXa80"></iframe>
+<p style="margin-top:45px;">HTML elements are the building blocks of HTML pages.With HTML constructs, images and other objects, such as interactive forms, may be embedded into ther rendered page.</p> It provides a means to create structured documents by denoting structural semantics for text such as headings, paragraphs, lists, links, quotes and other items. HTML elements are delineated by tags, written using angle brackets.
+
+
+</div>
+</div>
+
+<!--
+<input id="night_day" type="button" value="night" onclick="
+  if(document.querySelector('#night_day').value === 'night')에서
+  document.querySelector('#night_day')가 자기자신을 가르키므로
+this로 바꾼뒤 id="night_day"도 삭제 해주면 코드를 간소화 할 수 있다.
+
+
+let target = document.querySelector('body')
+document.querySelector('body')을 target으로 지정하면
+document.querySelector('body') 쓰던 곳에 target 쓸 수 있다
+
+<input type="button" value="night" onclick="
+  if(this.value === 'night'){
+  document.querySelector('body').style.backgroundColor = 'black';
+  document.querySelector('body').style.color = 'white';
+  this.value = 'day';
+} else {
+  document.querySelector('body').style.backgroundColor = 'white';
+  document.querySelector('body').style.color = 'black';
+  this.value = 'night';
+  }
+
+  ">
+
+-->
+
+<!--
+<input type="button" value="night" onclick="
+var target = document.querySelector('body');
+  if(this.value === 'night'){
+  target.style.backgroundColor = 'black';
+  target.style.color = 'white';
+  this.value = 'day';
+
+
+} else {
+  target.style.backgroundColor = 'white';
+  target.style.color = 'black';
+  this.value = 'night';
+
+  }
+  ">
+ -->
+
+
+
+</body>
+</html>

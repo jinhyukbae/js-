@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>Loop & Array</h1>
+    <script>
+      let food = ["apple", "cheese", "kimchi", "stew", "blue"];
+    </script>
+    <script>
+      food.push("gul");
+    </script>
+    <h2>food</h2>
+<!--
+아래 스크립트를 완성하면 스크립트 값의 변동을 줄 필요 없이 위의 함수 값만 변경하면 자동으로 변경된다.
+
+length < 개수를 세어줌 food.length 는 food 함수의 개수를 세어줌
+
+
+ -->
+ <!--
+
+'<li></li>'
+<a href="~~'+food[i]+'">'+food[i]+'</a>
+
+ -->
+    <ul>
+      <script>
+        let i = 0;
+        while (i<food.length) {
+        document.write('<li><a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/push'+food[i]+'">'+food[i]+'</a></li>');
+        i = i + 1;
+        }
+
+      </script>
+
+    </ul>
+  </body>
+</html>
+
+<!--
+<script>
+var i = 0;
+while(i<5){
+document.write('<li>'+food[i]+'</li>');
+
+}
+
+</script>
+
+ -->
